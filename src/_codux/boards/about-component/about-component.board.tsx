@@ -1,9 +1,10 @@
 import { createBoard } from '@wixc3/react-board';
-import { PagewithNavigation } from '../../board-wrappers/page-with-navigation';
+import { AboutComponent } from '../../../components/about-component/about-component';
 
 export default createBoard({
-    name: 'App',
-    Board: () => <PagewithNavigation />,
+    name: 'AboutComponent',
+    Board: () => <AboutComponent />,
+    isSnippet: false,
     environmentProps: {
         canvasMargin: {
             top: 0,
@@ -11,7 +12,7 @@ export default createBoard({
             right: 0,
             bottom: 0,
         },
-        windowWidth: 414,
-        windowHeight: 896,
+        windowWidth: 375,
+        windowHeight: 667,
     },
 });

@@ -1,0 +1,71 @@
+@import '@styles/theme.module.scss';
+
+.root {
+}
+
+.div {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.div1 {
+    position: relative;
+}
+
+.img1 {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.wrapper {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for perfect centering */
+    text-align: center;
+    color: white; /* Change text color for visibility */
+    z-index: 1; /* Ensure text is above the image */
+}
+
+.header1 {
+    font-size: 4.5rem; /* Adjust size */
+    margin: 0; /* Remove default margin */
+}
+
+.para {
+    font-size: 1.5rem; /* Adjust size */
+    max-width: 800px;
+    padding-bottom: 10px;
+}
+
+.button1 {
+    background-image: linear-gradient(#3333f5, #3333f5);
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white; /* Set button text color */
+}
+
+.div {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .header1 {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    .para {
+        font-size: 0.9rem; /* Smaller paragraph text */
+        max-width: 90%; /* Adjust max-width to fit mobile screens */
+    }
+
+    .button1 {
+        padding: 8px 16px; /* Keep padding for the button */
+    }
+}

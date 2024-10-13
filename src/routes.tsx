@@ -1,7 +1,11 @@
 import { RouteObject } from 'react-router-dom';
 import { SiteWrapper } from './components/site-wrapper/site-wrapper';
 import { HomePage } from './components/home-page/home-page';
-import { About } from './components/about/about';
+import { Feature } from './components/feature/feature';
+import { Subscription } from './components/subscription/subscription';
+import { AboutComponent } from './components/about-component/about-component';
+import ErrorPage from './components/error/error';
+import { Partners } from './components/partners/partners';
 
 export const routes: RouteObject[] = [
     {
@@ -9,7 +13,11 @@ export const routes: RouteObject[] = [
         element: <SiteWrapper />,
         children: [
             { index: true, element: <HomePage /> },
-            { path: 'about', element: <About /> },
-        ],
+            { path: 'products', element: <Feature /> },
+            { path: 'subscription', element: <Subscription /> },
+            { path: 'AboutComponent', element: <AboutComponent /> },
+            { path: 'Support', element: <Partners /> }, 
+        ], 
+        errorElement: <ErrorPage />,
     },
 ];

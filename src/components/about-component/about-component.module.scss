@@ -1,0 +1,114 @@
+@import '@styles/theme.module.scss';
+
+.root {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center vertically */
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #3333f5, #3381f5);
+}
+
+.divimg {
+    flex: 0 0 40%; /* Set a specific width for the image container */
+    display: flex; /* Center image inside */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 30px;
+
+    img {
+        margin-top: 100px;
+        max-width: 100%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
+        min-width: 200px; /* Set a minimum width for the image */
+    }
+}
+
+.textwrapper {
+    flex: 1; /* Allow text wrapper to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to start */
+    padding: 20px;
+    max-width: 400px; /* Limit width of text wrapper for desktop */
+
+    @media (max-width: 768px) {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
+.heading {
+    font-size: 48px; /* Adjust font size */
+    line-height: 56px; /* Adjust line height */
+    max-width: 500px; /* Limit width */
+    margin-bottom: 16px; /* Space below heading */
+}
+
+.para1 {
+    font-size: 20px; /* Adjust font size */
+    line-height: 28px; /* Adjust line height */
+    margin-bottom: 16px; /* Space below paragraphs */
+}
+
+.btn {
+    font: $button-font;
+    background-color: $black;
+    color: $white;
+    border-radius: 10px;
+    align-self: flex-start; /* Align button to start */
+    padding: 5px 16px; /* Decrease padding */
+    font-size: 16px; /* Decrease font size */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 36px; /* Smaller font size for tablets */
+        line-height: 44px;
+    }
+
+    .para1 {
+        font-size: 18px; /* Smaller paragraph font size */
+        line-height: 24px; /* Adjust line height */
+    }
+
+    .divimg {
+        flex: 0 0 50%; /* Adjust width for mobile screens */
+    }
+
+    .divimg img {
+        max-width: 90%; /* Ensure image takes up more space on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .div1 {
+        font-size: 10px;
+    }
+    .heading {
+        font-size: 18px; /* Smaller font size for mobile */
+        line-height: 20px;
+    }
+
+    .para1 {
+        font-size: 10px; /* Smaller paragraph font size */
+        line-height: 10px; /* Adjust line height */
+    }
+
+    .divimg {
+        flex: 0 0 70%; /* Allow image to take more space on smaller screens */
+    }
+
+    .divimg img {
+        max-width: 100%; /* Ensure image fully occupies its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.div2 {
+    width: 100vw;
+    height: 130vh;
+    background-color: #171717;
+}

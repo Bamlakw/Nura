@@ -36,9 +36,22 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+// Mobile Portrait
+@media only screen and (max-width: 480px) {
+  .image {
+      width: 100%; // Full width for small devices
+      height: auto;
+  }
+
+  .container {
+      flex-direction: column; // Stack content on small screens
+  }
+}
+
+// Tablet
+@media only screen and (max-width: 768px) {
+  .image-wrapper {
+      flex-basis: 48%; // Resize to fit two columns on a tablet
   }
 }
 

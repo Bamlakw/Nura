@@ -1,0 +1,157 @@
+@import '@styles/theme.module.scss';
+
+body {
+    overflow-y: auto; // Allow the body to scroll
+}
+
+.header1 {
+    font-size: 65px;
+    padding-top: 50px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 18rem; // Base width for larger screens
+    position: relative;
+    color: black;
+    transition: transform 0.2s; // Smooth scaling effect on hover
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-image: linear-gradient(to right, #eb48f7, #f8d481);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.cardImg {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.cardBody {
+    text-align: center;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.cardPrice {
+    font-size: 1.1rem;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: black;
+    margin-right: 10px;
+}
+
+.cardButton {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.cardButton:hover {
+    background-color: white;
+}
+
+.div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; // Allow wrapping of cards
+    justify-content: center; // Center align the cards
+}
+
+.root {
+}
+
+.div1 {
+    min-height: 100vh; // Ensure it takes at least the full viewport height
+    padding: 20px;
+    overflow-y: auto; // Allow vertical scrolling
+}
+
+
+.btn {
+    background-color: #d06c6c;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: white;
+    padding: 7px;
+    cursor: pointer;
+    align-items: start;
+    justify-items: center;
+    text-align: center;
+}
+
+.img {
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header1 {
+        font-size: 40px; // Smaller font size for tablets
+        padding-top: 30px; // Adjust padding
+    }
+
+    .card {
+        width: calc(50% - 10px); // Two cards per row on tablets
+        margin-bottom: 20px; // Space below each card
+        transform: scale(0.9); // Slightly decrease size
+    }
+
+    .cardTitle {
+        font-size: 1.1rem; // Smaller title font size
+    }
+
+    .cardPrice {
+        font-size: 1rem; // Smaller price font size
+    }
+}
+
+@media (max-width: 480px) {
+    .header1 {
+        font-size: 30px; // Even smaller font size for phones
+        padding-top: 20px; // Adjust padding
+    }
+
+    .discount {
+        font-size: 0.8rem; // Smaller discount badge
+        padding: 3px 7px; // Adjust padding
+    }
+
+    .card {
+        width: calc(100% - 20px); // Full width for cards on mobile
+        margin-bottom: 15px; // Space below each card
+        transform: scale(0.85); // Decrease size further
+    }
+
+    .cardTitle {
+        font-size: 1rem; // Smaller title font size
+    }
+
+    .cardPrice {
+        font-size: 0.9rem; // Smaller price font size
+    }
+
+    .btn {
+        font-size: 0.9rem; // Smaller button text
+        padding: 5px; // Adjust padding
+    }
+}

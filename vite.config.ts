@@ -5,15 +5,18 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    
     plugins: [
         react(),
         svgr({
             include: '**/*.svg?react',
         }),
     ],
+    base: '/Nura/', 
     resolve: {
         alias: {
             '@styles': path.resolve(__dirname, './src/styles/'),
         },
-    },
+    },// Change this to your actual GitHub repository name
 });
+

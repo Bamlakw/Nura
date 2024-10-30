@@ -3,11 +3,6 @@ import styles from './site-wrapper.module.scss';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
 import { Outlet } from 'react-router-dom';
-import { Feature } from '../feature/feature';
-import { AboutComponent } from '../about-component/about-component';
-import { Subscription } from '../subscription/subscription';
-import { Partners } from '../partners/partners';
-import { Video } from '../video/video';
 
 export interface SiteWrapperProps {
     className?: string;

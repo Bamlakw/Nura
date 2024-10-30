@@ -3,7 +3,7 @@ import { PagewithNavigation } from '../../board-wrappers/page-with-navigation';
 
 export default createBoard({
     name: 'App',
-    Board: () => <PagewithNavigation />,
+    Board: () => <PagewithNavigation />, 
     environmentProps: {
         canvasMargin: {
             top: 0,
@@ -11,7 +11,7 @@ export default createBoard({
             right: 0,
             bottom: 0,
         },
-        windowWidth: 414,
-        windowHeight: 896,
+        windowWidth: 1024,
+        windowHeight: 768,
     },
 });
